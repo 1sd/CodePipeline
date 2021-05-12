@@ -1,0 +1,100 @@
+[
+  {
+    "dnsSearchDomains": null,
+    "environmentFiles": null,
+    "logConfiguration": null,
+    "entryPoint": null,
+    "portMappings": [
+      {
+        "hostPort": 5044,
+        "protocol": "tcp",
+        "containerPort": 5044
+      },
+      {
+        "hostPort": 5000,
+        "protocol": "tcp",
+        "containerPort": 5000
+      },
+      {
+        "hostPort": 5000,
+        "protocol": "udp",
+        "containerPort": 5000
+      },
+      {
+        "hostPort": 9600,
+        "protocol": "tcp",
+        "containerPort": 9600
+      }
+    ],
+    "command": null,
+    "linuxParameters": null,
+    "cpu": 0,
+    "environment": [
+      {
+        "name": "ELASTIC_SEARCH_HOSTS",
+        "value": "${elastic_search_hosts}"
+      },
+      {
+        "name": "ELASTIC_SEARCH_TEMPLATE",
+        "value": "${elastic_search_template}"
+      },
+      {
+        "name": "ELK_VERSION",
+        "value": "7.10.1"
+      },
+      {
+        "name": "IDENTIFY_TASK",
+        "value": "/usr/share/logstash/pipeline"
+      },
+      {
+        "name": "JDBC_CONNECTION_CLASS",
+        "value": "org.postgresql.Driver"
+      },
+      {
+        "name": "JDBC_CONNECTION_LIBRARY",
+        "value": "/usr/share/logstash/jar/postgresql-42.2.18.jar"
+      },
+      {
+        "name": "JDBC_CONNECTION_STRING",
+        "value": "${jdbc_connection_string}"
+      },
+      {
+        "name": "LS_JAVA_OPTS",
+        "value": "-Xmx256m -Xms256m"
+      },
+      {
+        "name": "TZ",
+        "value": "Asia/Tokyo"
+      }
+    ],
+    "resourceRequirements": null,
+    "ulimits": null,
+    "dnsServers": null,
+    "mountPoints": [],
+    "workingDirectory": null,
+    "secrets": null,
+    "dockerSecurityOptions": null,
+    "memory": 700,
+    "memoryReservation": 700,
+    "volumesFrom": [],
+    "stopTimeout": null,
+    "image": "${container_image}",
+    "startTimeout": null,
+    "firelensConfiguration": null,
+    "dependsOn": null,
+    "disableNetworking": false,
+    "interactive": null,
+    "healthCheck": null,
+    "essential": true,
+    "links": null,
+    "hostname": null,
+    "extraHosts": null,
+    "pseudoTerminal": null,
+    "user": null,
+    "readonlyRootFilesystem": null,
+    "dockerLabels": null,
+    "systemControls": null,
+    "privileged": null,
+    "name": "${container_name}"
+  }
+]
