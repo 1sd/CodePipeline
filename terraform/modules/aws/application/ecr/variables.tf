@@ -1,1 +1,1 @@
-variable "name" {}
+variable "api_list" {}

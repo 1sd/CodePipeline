@@ -3,7 +3,7 @@ terraform {
 
   required_providers {
     aws = {
-      source = "hashicorp/aws"
+      source  = "hashicorp/aws"
       version = "~> 3.27"
     }
   }
@@ -12,7 +12,7 @@ terraform {
     # ここでvariable使えないのでハードコーディング
     region = "ap-northeast-1"
     bucket = "dev-codepipeline-tfstate-084081127834"
-    key = "tfstate"
+    key    = "tfstate"
 
     dynamodb_table = "dev-codepipeline-tfstate"
   }

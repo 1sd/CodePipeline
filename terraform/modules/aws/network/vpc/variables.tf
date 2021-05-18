@@ -1,1 +1,7 @@
-variable "vpc_id" {}
+variable "service" {}
+
+variable "subnets" {}
+
+variable "cidr_block" {
+  default = "10.0.0.0/16"
+}

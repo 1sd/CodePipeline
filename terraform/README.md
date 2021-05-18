@@ -1,9 +1,6 @@
 ## Setup
 ```shell
 $ tfenv install
-- 
-
-$ cd application
 ```
 
 ※まだtfstate管理用のs3を用意してない場合

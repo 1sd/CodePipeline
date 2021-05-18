@@ -18,11 +18,8 @@ resource "aws_s3_bucket" "this" {
       }
     }
   }
-  tags = merge(var.tags,
-    {
-      Name = "${var.prefix}-tfstate"
-    }
-  )
+
+  tags = merge(var.tags, { Name = "${var.prefix}-tfstate" })
 
   lifecycle {
     prevent_destroy = true
